@@ -6,7 +6,7 @@ import {
     Route,
     Routes,
   } from "react-router-dom";
-import { ZustandComponent, JotaiComponent } from './components/index.ts';
+import { ZustandComponent, JotaiComponent, EffectorComponent } from './components/index.ts';
 import './index.css'
 
 const Dashboard = () => (
@@ -15,6 +15,7 @@ const Dashboard = () => (
             <ul>
                 <li><Link to="/zustand">Zustand</Link></li>
                 <li><Link to="/jotai">Jotai</Link></li>
+                <li><Link to="/effector">Effector</Link></li>
             </ul>
         </div>
         <Outlet />
@@ -32,6 +33,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route
                     path="jotai"
                     element={<JotaiComponent />}
+                />
+                <Route
+                    path="effector"
+                    element={<EffectorComponent />}
                 />
             </Route>
         </Routes>
